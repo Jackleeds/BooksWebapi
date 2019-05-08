@@ -1,0 +1,20 @@
+﻿{
+  "total": 10,
+  "rows": [
+   { "ID"
+    :
+    1,
+    "BookName"
+    :
+    "一千零一夜",
+    "Author"
+    :
+    "解传",
+    "Publication_date"
+    :
+    "1999/1/1 0:00:00",
+    "Remark"
+    :
+    "该作讲述相传古代印度与中国之间有一萨桑国，国王山鲁亚尔生性残暴嫉妒，因王后行为不端，将其杀死，此后每日娶一少女，翌日晨即杀掉，以示报复。宰相的女儿山鲁佐德为拯救无辜的女子，自愿嫁给国王，用讲述故事方法吸引国王，每夜讲到最精彩处。"
+},
+  "ID":2,"BookName":"百年孤独","Author":"加西亚·马尔克斯","Publication_date":"1967/4/3 0:00:00","Remark":"作品描写了布恩迪亚家族七代人的传奇故事，以及加勒比海沿岸小镇马孔多的百年兴衰，反映了拉丁美洲一个世纪以来风云变幻的历史。作品融入神话传说、民间故事、宗教典故等神秘因素，巧妙地糅合了现实与虚幻，展现出一个瑰丽的想象世界，成为20世纪重要的经典文学巨著之一。"},"ID":3,"BookName":"心计","Author":"辉浩","Publication_date":"2016/7/1 0:00:00","Remark":"成功的人之所以成功,是因为比一般人多一点心机,聪明的人之所以聪明，是因为比一般人多一点城府."},"ID":4,"BookName":"a","Author":"w","Publication_date":"2019/2/2 0:00:00","Remark":"qwer"},"ID":5,"BookName":"q","Author":"q","Publication_date":"2019/2/2 0:00:00","Remark":"qwer"},"ID":6,"BookName":"a","Author":"w","Publication_date":"2019/2/2 0:00:00","Remark":"asd"},"ID":7,"BookName":"a","Author":"w","Publication_date":"2019/2/2 0:00:00","Remark":"qwe"},"ID":8,"BookName":"a","Author":"a","Publication_date":"2019/2/2 0:00:00","Remark":"asd"},"ID":9,"BookName":"q","Author":"w","Publication_date":"2019/2/2 0:00:00","Remark":"qwe"},"ID":10,"BookName":"asd","Author":"asd","Publication_date":"2019/2/2 0:00:00","Remark":"qwe"}]}

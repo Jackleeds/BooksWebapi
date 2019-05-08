@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="BootStrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="BootStrap/css/bootstrap-table.min.css" rel="stylesheet" />
+    <link href="BootStrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="panel-body" style="padding-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">查询条件</div>
+            <div class="panel-body" style="padding:0px;">
+                <form id="formSearch" class="form-horizontal">
+                    <div class="form-group" style="margin-top:15px">
+                        <label class="control-label col-sm-1" for="txt_search_bookname">图书名称</label>
+                        <div class="col-sm-3" style="padding-right:13px">
+                            <input type="text" class="form-control" id="txt_search_booktname">
+                        </div>
+                        <label class="control-label col-sm-1" for="txt_search_author">作者</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="txt_search_author">
+                        </div>
+                        <div class="col-sm-4" style="text-align:left;">
+                            <button type="button" style="margin-left:50px" id="btn_query" class="btn btn-primary">查询</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--数据表格-->
+        <div class="table-responsive">
+            <table id="table" class="table table-hover"></table>
+        </div>
+        <!--操作-->
+        <div id="toolbar" class="btn-group">
+           
+            <button id="btn_add" type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
+            </button>
+            <button id="btn_edit" type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>修改
+            </button>
+            <button id="btn_delete" type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
+            </button>
+            <div  style="float:left">
+                <select class="form-control">
+                    <option value="">Export Basic</option>
+                    <option value="all">Export All</option>
+                    <option value="selected">Export Selected</option>
+                </select>
+            </div>
+            <!--新增模态框-->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="width:600px;height:450px;">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                添加
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <form id="add_form_modal" class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-sm-2">
+                                        <label class="control-label" for="add_book_name">图书名</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" name="book_name" class="form-control" id="add_book_name">
+                                    </div>
+                                    <label class="err-info-modal"></label>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-2">
+                                        <label class="control-label" for="add_author">作者</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" name="add_author" class="form-control" id="add_author">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-2"><label for="dtp_input2" class="control-label">出版时间</label></div>
+                                    <div class="input-group date form_date col-sm-6">
+                                        <input class="form-control" size="16" type="text" value="" readonly id="add_date">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                    </div>
+                                    <input type="hidden" id="dtp_input2" value="" /><br />
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-2">
+                                        <label class="control-label" for="add_remark">简介</label>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="textarea">
+                                            <textarea type="text" id="add_remark" rows="5" class="form-control" name="add_remark"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default btn_reset_c" data-dismiss="modal">
+                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>取消
+                            </button>
+
+                            <button type="button" id="btn_add_reset" class="btn btn-default btn_reset_c">
+                                <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>重置
+                            </button>
+
+                            <button type="button" id="btn_add_submit" class="btn btn-primary" data-dismiss="modal">
+                                <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>保存
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="BootStrap/JS/jquery-3.3.1.min.js"></script>
+     <script src="BootStrap/JS/jquery-3.3.1.min.js"></script> 
+     <script src="BootStrap/JS/bootstrap.min.js"></script>
+    <script src="BootStrap/JS/bootstrap-table.min.js"></script> 
+    <script src="BootStrap/JS/bootstrap-table-zh-CN.min.js"></script>
+    <script src="BootStrap/JS/bootstrap-datetimepicker.js"></script>
+    <script src="BootStrap/JS/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="BootStrap/JS/bootstrap-table-export.js"></script>
+    <script src="BootStrap/JS/tableExport.min.js"></script>
+    <!--@*4、页面Js文件的引用*@-->
+
+    <script src="Js/Index.js"></script>
+</body>
+</html>
